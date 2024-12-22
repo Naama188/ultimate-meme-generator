@@ -3,7 +3,7 @@
 }
 
 body {
-
+    text-align: center;
     font-size: 1rem;
     margin: 0;
     background-color: gray;
@@ -14,4 +14,15 @@ h1 {
     color: blueviolet;
     font-family: 'Courier New', Courier, monospace;
     font-size: large;
+}
+.canvas-container {
+    width: 80vw;
+    margin: 10px auto;
+    background-color: brown;
+    border: 1px solid black;
+}
+
+canvas {
+    background-color: white;
+    border: 1px solid black;
 }

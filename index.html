@@ -7,7 +7,7 @@
     <title>Ultimate Meme Generator</title>
 
 </head>
-<body>
+<body onload="onInit()">
     <h1>Ultimate Meme Generator</h1>
 
     <section class="imgs-gallery">
@@ -15,10 +15,19 @@
     </section>
 
     <section class="editor">
+        <div class="canvas-container">
+            <canvas width="450" height="450"></canvas>
+        </div>
+       
 
     </section>
 
-    <script src="js/main.js"></script>
+    <script src="js/service/utils.js"></script>
+    <script src="js/service/localStoreg.js"></script>
+    <script src="js/service/service.js"></script>
+
+    <script src="js/galleryController.js"></script>
+    <script src="js/memeController.js"></script>
     
 </body>
 </html>
