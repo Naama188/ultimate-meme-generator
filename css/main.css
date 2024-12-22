@@ -1,0 +1,17 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+
+    font-size: 1rem;
+    margin: 0;
+    background-color: gray;
+}
+
+h1 {
+  
+    color: blueviolet;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: large;
+}
