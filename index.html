@@ -10,17 +10,23 @@
 <body onload="onInit()">
     <h1>Ultimate Meme Generator</h1>
 
-    <section class="imgs-gallery">
-
-    </section>
-
-    <section class="editor">
+    <section class="editor hidden">
+        <input type="text" oninput="setLineTxt(this.value)" />
         <div class="canvas-container">
             <canvas width="450" height="450"></canvas>
         </div>
        
 
     </section>
+
+    <section class="imgs-gallery">
+        <h3>Select an image</h3>
+   
+  
+
+    </section>
+
+ 
 
     <script src="js/service/utils.js"></script>
     <script src="js/service/localStorage.js"></script>

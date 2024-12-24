@@ -9,7 +9,7 @@ body {
     background-color: gray;
 }
 
-h1 {
+h1,h3 {
   
     color: blueviolet;
     font-family: 'Courier New', Courier, monospace;
@@ -18,11 +18,25 @@ h1 {
 .canvas-container {
     width: 80vw;
     margin: 10px auto;
-    background-color: brown;
+    background-color: blueviolet;
     border: 1px solid black;
 }
 
 canvas {
-    background-color: white;
+    background-color: lightgrey;
     border: 1px solid black;
+}
+
+.hidden {
+    display: none;
+}
+
+.imgs-gallery img{
+    width: 300px;
+    cursor: pointer;
+    filter: grayscale(1);
+}
+.imgs-gallery img:hover{
+    transition: 1s;
+    filter: unset;
 }
