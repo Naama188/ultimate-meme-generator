@@ -14,9 +14,11 @@
         <input type="text" oninput="setLineTxt(this.value)" />
         <label for="color">Choose Color: </label>
         <input type="color" oninput="setColor(this.value)" id="color" name="color" value="#ff0000" id="color"/>
-        <label for="size">Font Size: <span id="FSize">20</span></label>
+        <label for="size">Font Size: <span id="FSize"></span></label>
         <input type="range" id="size" name="size" step="10" min="10" max="80" value="20"
                         onchange="setFontSize(this.value)" />
+        <button class="addLine" onclick="addLine()">+</button>
+        <button class="switchLine" onclick="switchLine()">↑↓</button>
         
         <a href="#" class="btn" onclick="onDownloadImg(this)" download="my-img.jpg">Download Image from Canvas</a>
         <div class="canvas-container">
