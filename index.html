@@ -12,6 +12,13 @@
 
     <section class="editor hidden">
         <input type="text" oninput="setLineTxt(this.value)" />
+        <label for="color">Choose Color: </label>
+        <input type="color" oninput="setColor(this.value)" id="color" name="color" value="#ff0000" id="color"/>
+        <label for="size">Font Size: <span id="FSize">20</span></label>
+        <input type="range" id="size" name="size" step="10" min="10" max="80" value="20"
+                        onchange="setFontSize(this.value)" />
+        
+        <a href="#" class="btn" onclick="onDownloadImg(this)" download="my-img.jpg">Download Image from Canvas</a>
         <div class="canvas-container">
             <canvas width="450" height="450"></canvas>
         </div>
@@ -30,7 +37,7 @@
 
     <script src="js/service/utils.js"></script>
     <script src="js/service/localStorage.js"></script>
-    <script src="js/service/service.js"></script>
+    <script src="js/service/memeService.js"></script>
 
     <script src="js/galleryController.js"></script>
     <script src="js/memeController.js"></script>

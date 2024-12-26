@@ -39,16 +39,20 @@ function renderMeme(){
     const meme = getMeme()
     const txt = meme.lines[0].txt
     gCtx.drawImage(gCurrImg, 0, 0, gElCanvas.width, gElCanvas.height)
+
+    var txtColor = gMeme.lines[gMeme.selectedLineIdx].color
+
+    var fontSize = gMeme.lines[gMeme.selectedLineIdx].size
     
-    drawText(txt,50,50)
-    
+    drawText(txt,50,50, txtColor,fontSize)
+   
 }
 
-function drawText(text, x, y) {
+function drawText(text, x, y,color,size) {
     gCtx.lineWidth = 1
-    gCtx.strokeStyle = 'blueviolet'
-    gCtx.fillStyle = 'black'
-    gCtx.font = '40px Arial'
+    gCtx.strokeStyle = 'black'
+    gCtx.fillStyle = color
+    gCtx.font = `${size}px Arial`
     gCtx.textAlign = 'center'
     gCtx.textBaseline = 'middle'
   
@@ -63,9 +67,28 @@ function drawText(text, x, y) {
 }
 
 function setLineTxt(elValue) {
-    console.log("elValue", elValue)
+    // console.log("elValue", elValue)
     getTxtValue(elValue)
     renderMeme()
+}
+
+function setColor(elValue) {
+   
+    getColor(elValue)
+    renderMeme()
+}
+
+function setFontSize(elValue) {
+    
+    getFontSize(elValue)
+    renderMeme()
+}
+
+
+
+function onDownloadImg(elLink) {
+    const imgContent = gElCanvas.toDataURL('image/jpeg')
+    elLink.href = imgContent
 }
 
 

@@ -4,7 +4,7 @@ _createImgs()
 var gMeme = {
   selectedImgId: 5,
   selectedLineIdx: 0,
-  lines: [{ txt: "I sometimes eat Falafel", size: 20, color: "red" }],
+  lines: [{ txt: "I sometimes eat Falafel", size: 40, color: "red" }],
 };
 
 var gKeywordSearchCountMap = { funny: 12, cat: 16, baby: 2 };
@@ -36,6 +36,21 @@ function _createImgs(){
 function  getTxtValue(elValue) {
 
      gMeme.lines[gMeme.selectedLineIdx].txt = elValue
-     
+
  
 }
+
+function  getColor(elValue) {
+
+     gMeme.lines[gMeme.selectedLineIdx].color = elValue
+
+ 
+}
+
+function  getFontSize(elValue) {
+
+     gMeme.lines[gMeme.selectedLineIdx].size = elValue
+
+ 
+}
+
