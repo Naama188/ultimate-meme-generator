@@ -7,7 +7,47 @@ function onInit() {
   renderImgs();
   renderCanvas();
   renderMeme();
+
+  // gElCanvas.addEventListener('click',onCanvasClick)
+  
+
 }
+
+
+function onCanvasClick(ev) {
+  const clickX = ev.offsetX;
+  const clickY = ev.offsetY;
+
+  // Find the clicked line
+  const clickedLineIdx = getClickedLineIdx(clickX, clickY);
+
+  console.log("clickedLineIdx", clickedLineIdx)
+
+  if (clickedLineIdx !== -1) {
+      gMeme.selectedLineIdx = clickedLineIdx;
+      renderMeme(); // Re-render to show the selected line
+}
+}
+
+function getClickedLineIdx(x, y) {
+  for (let i = 0; i < gMeme.lines.length; i++) {
+      const line = gMeme.lines[i];
+      const textMetrics = gCtx.measureText(line.txt);
+
+      const textWidth = textMetrics.width;
+      const textHeight = line.size ; // Approximate text height
+
+      // Check if the click is within the line's bounding box
+      const isWithinX = x >= (line.x - textWidth / 2) && x <= (line.x + textWidth / 2);
+      const isWithinY = y >= (line.y - textHeight / 2) && y <= (line.y + textHeight / 2);
+
+      if (isWithinX && isWithinY) {
+          return i; // Return the index of the clicked line
+      }
+  }
+  return -1; // No line clicked
+}
+
 
 function renderCanvas() {
   gElCanvas = document.querySelector("canvas");
