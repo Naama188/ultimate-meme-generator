@@ -18,7 +18,31 @@
         <input type="range" id="size" name="size" step="10" min="10" max="80" value="20"
                         onchange="setFontSize(this.value)" />
         <button class="addLine" onclick="addLine()">+</button>
+        <button class="deleteLine" onclick="deleteLine()">X</button>
         <button class="switchLine" onclick="switchLine()">↑↓</button>
+        <label for="font">Font:</label>
+
+        
+
+    <select id="font" onchange="onFontChange(this.value)">
+        <option value="Impact">Impact</option>
+        <option value="Arial">Arial</option>
+        <option value="Verdana">Verdana</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Trebuchet MS">Trebuchet MS</option>
+        <option value="Tahoma">Tahoma</option>
+        <option value="Times New Roman">Times New Roman</option>
+        <option value="Georgia">Georgia</option>
+        <option value="Garamond">Garamond</option>
+        <option value="Courier New">Courier New</option>
+        <option value="Brush Script MY">Brush Script MT</option>
+        <option value="Poppins">Poppins</option>
+
+    </select>
+    
+    <button class="fontLeft" onclick="onSetTxtAlign('right')">⇶</button>
+    <button class="fontCenter" onclick="onSetTxtAlign('center')">☰</button>
+    <button class="fontRight" onclick="onSetTxtAlign('left')">⬱</button>
         
         <a href="#" class="btn" onclick="onDownloadImg(this)" download="my-img.jpg">Download Image from Canvas</a>
         <div class="canvas-container">
