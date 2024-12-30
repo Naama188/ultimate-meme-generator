@@ -92,10 +92,6 @@ function onClickGallery() {
   
 }
 
-function centerLine1() {
-  gMeme.lines[0].x = gElCanvas.width / 2
-}
-
 function renderMeme() {
   const meme = getMeme()
   gCtx.drawImage(gCurrImg, 0, 0, gElCanvas.width, gElCanvas.height)

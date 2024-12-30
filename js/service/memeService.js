@@ -111,11 +111,6 @@ function changeFontSize(changeType) {
   renderMeme()
 }
 
-function  getFontSize(elValue) {
-
-     gMeme.lines[gMeme.selectedLineIdx].size = +elValue
- 
-}
 
 
 
