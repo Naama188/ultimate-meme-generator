@@ -1,0 +1,20 @@
+@media (max-width: 768px) {
+    .editor-tools-container {
+        flex-direction: column; 
+        align-items: center;
+    }
+
+    .canvas-container, .editor-tools {
+        max-width: 100%; 
+    }
+}
+
+@media (max-width: 480px) {
+    .canvas-container {
+        max-width: 90%; 
+    }
+
+    .editor-tools {
+        max-width: 90%;
+    }
+}

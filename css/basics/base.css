@@ -1,0 +1,26 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Poppines,sans-serif;
+
+    font-size: 1rem;
+    margin: 0;
+    background-color: #20232a;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: var(--clr-secendry5);
+    margin: 0 0 1em;
+}
+
+.hidden {
+    display: none;
+}

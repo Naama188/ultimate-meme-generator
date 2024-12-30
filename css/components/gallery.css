@@ -1,0 +1,39 @@
+.gallery-view {
+    margin: 0 0 1em;
+
+}
+
+.imgs-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 10px; /* Space between columns and rows */
+   
+    
+}
+
+.imgs-gallery img{
+    width: 300px;
+    cursor: pointer;
+    filter: grayscale(1);
+}
+
+.imgs-gallery img:hover{
+    transition: 1s;
+    filter: unset;
+}
+
+
+/* .search-bar {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.search-bar input {
+    flex: 1;
+    padding: 10px;
+}
+
+.search-bar button {
+    padding: 10px;
+    background-color: #61dafb;
+} */

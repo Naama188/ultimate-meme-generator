@@ -3,63 +3,86 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://kit.fontawesome.com/494502d9bd.js" crossorigin="anonymous"></script>
     <title>Ultimate Meme Generator</title>
 
 </head>
 <body onload="onInit()">
-    <h1>Ultimate Meme Generator</h1>
+
+    <header class="main-header">
+        <div class="main-header-container">
+            <div class="header">
+                <div class="logo">Ultimate Meme Generator</div>
+                <nav>
+                    <a href="#" onclick="onClickGallery()">Gallery</a>
+                    <a href="#">About</a>
+                </nav>
+            </div>
+        </div>
+
+    </header>
+
+    <section class="gallery-view">
+
+     <h1>Select an image:</h1>
+    <section class="imgs-gallery">
+      
+    </section>
+    
 
     <section class="editor hidden">
-        <input type="text" oninput="setLineTxt(this.value)" />
-        <label for="color">Choose Color: </label>
-        <input type="color" oninput="setColor(this.value)" id="color" name="color" value="#ff0000" id="color"/>
-        <label for="size">Font Size: <span id="FSize"></span></label>
-        <input type="range" id="size" name="size" step="10" min="10" max="80" value="20"
-                        onchange="setFontSize(this.value)" />
-        <button class="addLine" onclick="addLine()">+</button>
-        <button class="deleteLine" onclick="deleteLine()">X</button>
-        <button class="switchLine" onclick="switchLine()">↑↓</button>
-        <label for="font">Font:</label>
+       <div class="editor-tools-container">
 
-        
-
-    <select id="font" onchange="onFontChange(this.value)">
-        <option value="Impact">Impact</option>
-        <option value="Arial">Arial</option>
-        <option value="Verdana">Verdana</option>
-        <option value="Tahoma">Tahoma</option>
-        <option value="Trebuchet MS">Trebuchet MS</option>
-        <option value="Tahoma">Tahoma</option>
-        <option value="Times New Roman">Times New Roman</option>
-        <option value="Georgia">Georgia</option>
-        <option value="Garamond">Garamond</option>
-        <option value="Courier New">Courier New</option>
-        <option value="Brush Script MY">Brush Script MT</option>
-        <option value="Poppins">Poppins</option>
-
-    </select>
-    
-    <button class="fontLeft" onclick="onSetTxtAlign('right')">⇶</button>
-    <button class="fontCenter" onclick="onSetTxtAlign('center')">☰</button>
-    <button class="fontRight" onclick="onSetTxtAlign('left')">⬱</button>
-        
-        <a href="#" class="btn" onclick="onDownloadImg(this)" download="my-img.jpg">Download Image from Canvas</a>
         <div class="canvas-container">
-            <canvas width="450" height="450" onclick="onCanvasClick(event)"></canvas>
+            <canvas width="500" height="500" onclick="onCanvasClick(event)"></canvas>
         </div>
-       
 
+        <div class="editor-tools">
+
+            <div class="tool-buttons">
+
+            <input type="text" id="textEditor" class="textEditor" oninput="setLineTxt(this.value)" />
+            <div class="line1-buttons">
+            <button class="btn addLine" onclick="addLine()"><i class="fa-solid fa-plus"></i></button>
+            <button class="btn deleteLine" onclick="deleteLine()"><i class="fa-solid fa-trash"></i></button>
+            <button class="btn switchLine" onclick="switchLine()"><i class="fa-solid fa-arrow-up"> </i><i class="fa-solid fa-arrow-down"></i></button>
+
+            </div>
+            
+                <div class="line2-buttons">
+                <button class="btn small" onclick="changeFontSize('increase')">A+</button>
+                <button class="btn small" onclick="changeFontSize('decrease')">A-</button>
+                <button class="btn small" onclick="onSetTxtAlign('left')"><i class="fa-solid fa-align-left"></i></button>
+                <button class="btn small" onclick="onSetTxtAlign('center')"><i class="fa-solid fa-align-justify"></i></button>
+                <button class="btn small" onclick="onSetTxtAlign('right')"><i class="fa-solid fa-align-right"></i></button>
+                
+            </div>
+            <div class="line3-buttons">
+                <input type="color" oninput="setColor(this.value)" id="color" name="color" value="#ff0000" id="color"/>
+                
+                <select id="font" onchange="onFontChange(this.value)">
+                    <option value="Impact">Impact</option>
+                    <option value="Arial">Arial</option>
+                    <option value="Verdana">Verdana</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Trebuchet MS">Trebuchet MS</option>
+                    <option value="Tahoma">Tahoma</option>
+                    <option value="Times New Roman">Times New Roman</option>
+                    <option value="Georgia">Georgia</option>
+                    <option value="Garamond">Garamond</option>
+                    <option value="Courier New">Courier New</option>
+                    <option value="Brush Script MY">Brush Script MT</option>
+                    <option value="Poppins">Poppins</option>
+            
+                </select>
+            </div>
+            <button class="btn download" onclick="onDownloadImg()" download="my-img.jpg"><i class="fa-solid fa-download"></i> Download</button>
+            </div>
+        </div>
+    </div>
     </section>
 
-    <section class="imgs-gallery">
-        <h3>Select an image</h3>
-   
-  
-
-    </section>
-
- 
 
     <script src="js/service/utils.js"></script>
     <script src="js/service/localStorage.js"></script>

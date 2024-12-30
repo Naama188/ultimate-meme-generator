@@ -1,7 +1,4 @@
-'use strict';
-
-
-
+'use strict'
 
 function renderImgs()  {
     const elGallry = document.querySelector('.imgs-gallery')
@@ -9,7 +6,7 @@ function renderImgs()  {
     console.log("imgs", imgs)
   
         const strHtml = imgs.map(img => `
-       <img src="${img.url}" onclick="onSelectImg(this)" />`)
+       <img src="${img.url}" onclick="onSelectImg(this)" class="gallery-item"/>`)
 
         elGallry.innerHTML = strHtml.join('')
 

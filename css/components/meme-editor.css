@@ -1,0 +1,121 @@
+
+/* Meme Generator */
+.editor-tools-container {
+    display: flex;
+    flex-wrap: nowrap; 
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 20px; 
+    margin: 20px;
+    padding: 20px;
+    overflow: hidden;
+    width: 100%;
+}
+
+/* Canvas and Text */
+.canvas-container {
+    flex: 1; 
+    max-width: 65%;
+    box-sizing: border-box;
+
+}
+
+.editor-tools {
+    flex: 1; 
+    max-width: 35%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px; 
+    box-sizing: border-box;
+    background-color: var(--clr-primary2);
+    border-radius: 20px;
+
+}
+
+#memeCanvas {
+    width: 100%;
+    height: 100%;
+    border: 1px solid #555;
+}
+
+.meme-text {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px black;
+    font-size: 24px;
+    pointer-events: none;
+   
+}
+
+.top-text {
+    top: 10%;
+}
+
+.bottom-text {
+    bottom: 10%;
+}
+
+.line1-buttons {
+    display: flex;
+    gap: 10px; 
+    justify-content: flex-start;
+    margin-bottom: 10px; 
+   
+}
+
+.tool-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    background-color: var(--clr-primary1);
+    border-radius: 20px;
+    padding: 20px;
+    margin: 10px;
+}
+
+.line2-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: flex-start;
+
+}
+
+.line3-buttons {
+    display: flex;
+    gap: 15px; 
+    justify-content: center;
+    align-items: center; 
+
+}
+
+.btn {
+    width: 100%; 
+    padding: 10px;
+    text-align: center;
+}
+
+.input-field {
+    width: 100%;
+    padding: 10px;
+    border-radius: 20px;
+    border: none;
+    font-size: 16px;
+}
+
+.textEditor {
+    border-radius: 20px;
+    padding: 10px;
+
+}
+
+/* Color Picker */
+.color-picker {
+    width: 40px;
+    height: 40px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}

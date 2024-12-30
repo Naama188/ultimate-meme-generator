@@ -1,0 +1,129 @@
+.buttons-row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.btn {
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn.small {
+    
+    padding: 5px 10px;
+    font-size: 12px;
+    box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 5px 5px 2px 0px rgba(0,0,0,0.75);
+
+    border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+}
+
+.btn.switchLine {
+    box-shadow: 0px 0px 0px 2px #48a5bf;
+	background:linear-gradient(to bottom, #58c3e1 5%, #61dafb 100%);
+	background-color:#61dafb;
+	border-radius:10px;
+	border:1px solid #61dafb;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #367b8e;
+}
+
+.btn.switchLine:hover {
+	background:linear-gradient(to bottom, #4fb2ce 5%, #32d1fc 100%);
+	background-color:#61dafb;
+}
+
+.btn.switchLine:active {
+	position:relative;
+	top:1px;
+}
+
+
+.btn.addLine {
+    box-shadow: 0px 0px 0px 2px #175e27;
+	background:linear-gradient(to bottom, #30c753 5%, #28a745 100%);
+	background-color:#28a745;
+	border-radius:10px;
+	border:1px solid #28a745;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #28a7466d;
+}
+
+.btn.addLine:hover {
+	background:linear-gradient(to bottom, #269f42 5%, #218939 100%);
+	background-color:#28a745;
+}
+.btn.addLine:active {
+	position:relative;
+	top:1px;
+}
+
+.btn.deleteLine {
+    box-shadow: 0px 0px 0px 2px #a62532;
+	background:linear-gradient(to bottom, #fe4355 5%, #dc3545 100%);
+	background-color:#dc3545;
+	border-radius:10px;
+	border:1px solid#dc3545;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #95222d;
+}
+
+.btn.deleteLine:hover {
+	background:linear-gradient(to bottom, #d23747 5%, #b42c3a 100%);
+	background-color:#8a1e29;
+}
+
+.btn.deleteLine:active {
+	position:relative;
+	top:1px;
+}
+
+.btn.download {
+    box-shadow: 0px 0px 0px 2px #6a0dad4f;
+	background:linear-gradient(to bottom, #9d13ff 5%, #6a0dad 100%);
+	background-color:#6a0dad;
+	border-radius:10px;
+	border:1px solid #6a0dad;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-size:19px;
+	padding:12px 37px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #a931ff;
+}
+
+.btn.download:hover {
+	background:linear-gradient(to bottom, #7f10cf 5%, #4a0a79 100%);
+	background-color:#38095a;
+}
+
+.btn.download:active {
+	position:relative;
+	top:1px;
+}
+

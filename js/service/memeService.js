@@ -1,13 +1,13 @@
-"use strict";
-var gImgs = [];
+'use strict'
+var gImgs = []
 _createImgs()
 var gMeme = {
   selectedImgId: 5,
   selectedLineIdx: 0,
-  lines: [{ txt: "I sometimes eat Falafel", size: 20,font:'Arial', align: 'center', color: "#FF0000",x:225,y:50},],
-};
+  lines: [{ txt: "ADD TEXT HERE", size: 40,font:'Arial', align: 'center', color: "#FFFFFF",x:225,y:50},],
+}
 
-var gKeywordSearchCountMap = { funny: 12, cat: 16, baby: 2 };
+var gKeywordSearchCountMap = { funny: 12, cat: 16, baby: 2 }
 
 function getMeme() {
   return gMeme;
@@ -22,7 +22,7 @@ function _createImg(i) {
     id: makeId,
     url: `imgs/${i}.jpg`,
     keywords: ["funny", "cat"],
-  };
+  }
 }
 
 function _createImgs(){
@@ -33,6 +33,12 @@ function _createImgs(){
 
 }
 
+function updateTextEditor() {
+  const textEditor = document.getElementById("textEditor");
+
+  textEditor.value = gMeme.lines[gMeme.selectedLineIdx].txt;
+}
+
 function switchLine(){
 
  if (gMeme.selectedLineIdx === gMeme.lines.length-1) {
@@ -40,24 +46,23 @@ function switchLine(){
  } else {
   gMeme.selectedLineIdx++
  }
-
+ updateSelectedLine()
+ updateTextEditor()
  renderMeme()
 
- console.log("gMeme.selectedLineIdx", gMeme.selectedLineIdx)
 }
-
 
 function addLine(){
   
   const xLine = gElCanvas.width / 2
-  // const xLine = gMeme.lines[gMeme.lines.length-1].x
   const yLine = gMeme.lines[gMeme.lines.length-1].y
-  const newLine = _createLine('ADD TEXT HERE',40,'Arial','center','#FF0000',xLine,yLine+50)
+  const newLine = _createLine('ADD TEXT HERE',40,'Arial','center','#FFFFFF',xLine,yLine+50)
 
   gMeme.lines.push(newLine)
   gMeme.selectedLineIdx = gMeme.lines.length-1
+  updateSelectedLine()
+  updateTextEditor()
   renderMeme()
-  console.log("gMeme", gMeme)
 
 }
 
@@ -83,14 +88,14 @@ gMeme.lines.splice(lineIdx,1)
 if(gMeme.selectedLineIdx>=gMeme.lines.length){
   gMeme.selectedLineIdx = gMeme.lines.length-1;
 }
-
+updateSelectedLine()
+updateTextEditor()
 renderMeme()
 }
 
-function  getTxtValue(elValue) {
+function getTxtValue(elValue) {
 
      gMeme.lines[gMeme.selectedLineIdx].txt = elValue
-
  
 }
 
@@ -98,13 +103,17 @@ function  getColor(elValue) {
 
      gMeme.lines[gMeme.selectedLineIdx].color = elValue
 
- 
+}
+
+function changeFontSize(changeType) {
+  if(changeType == 'increase') gMeme.lines[gMeme.selectedLineIdx].size +=10
+  else if(changeType == 'decrease') gMeme.lines[gMeme.selectedLineIdx].size -=10
+  renderMeme()
 }
 
 function  getFontSize(elValue) {
 
      gMeme.lines[gMeme.selectedLineIdx].size = +elValue
-
  
 }
 
