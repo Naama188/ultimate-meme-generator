@@ -2,7 +2,7 @@
 var gElCanvas
 var gCtx
 var gCurrImg
-var gDlMode = false;
+var gDlMode = false
 const gPadding = 20
 
 function onInit() {
@@ -21,7 +21,7 @@ function onCanvasClick(ev) {
 
   if (clickedLineIdx !== -1) {
       gMeme.selectedLineIdx = clickedLineIdx
-      updateSelectedLine();
+      updateSelectedLine()
        
   }
 }
@@ -29,7 +29,7 @@ function onCanvasClick(ev) {
 function updateSelectedLine(){
   const selectedLine = gMeme.lines[gMeme.selectedLineIdx]
   const colorPicker = document.getElementById('color')
-  colorPicker.value = selectedLine.color;
+  colorPicker.value = selectedLine.color
   
   updateTextEditor()
   renderMeme()
@@ -114,7 +114,7 @@ function renderMeme() {
 function drawText(text, size, color, x, y,font, align) {
   gCtx.lineWidth = 1
   gCtx.strokeStyle = "black"
-  gCtx.fillStyle = color;
+  gCtx.fillStyle = color
   gCtx.font = `${size}px ${font}`
   gCtx.textAlign = "center"
   gCtx.textBaseline = "middle"
@@ -165,14 +165,14 @@ function setFontSize(elValue) {
 }
 
 function onDownloadImg() {
-  gDlMode = true;
-  renderMeme();
+  gDlMode = true
+  renderMeme()
 
   const imgContent = gElCanvas.toDataURL("image/jpg")
   const link = document.createElement("a")
-  link.href = imgContent;
+  link.href = imgContent
   link.download = "mymeme.jpg"
-  link.click(); 
+  link.click()
 
   gDlMode = false
   renderMeme()

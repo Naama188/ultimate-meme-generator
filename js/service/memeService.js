@@ -10,11 +10,11 @@ var gMeme = {
 var gKeywordSearchCountMap = { funny: 12, cat: 16, baby: 2 }
 
 function getMeme() {
-  return gMeme;
+  return gMeme
 }
 
 function getImgs() {
-  return gImgs;
+  return gImgs
 }
 
 function _createImg(i) {
@@ -34,9 +34,9 @@ function _createImgs(){
 }
 
 function updateTextEditor() {
-  const textEditor = document.getElementById("textEditor");
+  const textEditor = document.getElementById("textEditor")
 
-  textEditor.value = gMeme.lines[gMeme.selectedLineIdx].txt;
+  textEditor.value = gMeme.lines[gMeme.selectedLineIdx].txt
 }
 
 function switchLine(){
@@ -80,13 +80,13 @@ function _createLine(txt,size,font,align,color,x,y) {
 }
 
 function deleteLine() {
-if(gMeme.lines.length===1) return;
+if(gMeme.lines.length===1) return
   const lineIdx = gMeme.selectedLineIdx
 
 gMeme.lines.splice(lineIdx,1)
 
 if(gMeme.selectedLineIdx>=gMeme.lines.length){
-  gMeme.selectedLineIdx = gMeme.lines.length-1;
+  gMeme.selectedLineIdx = gMeme.lines.length-1
 }
 updateSelectedLine()
 updateTextEditor()
